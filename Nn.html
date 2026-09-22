@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Netsanet Book Store</title>
+</head>
+<header>
+    <h1>Netsanet Book Store</h1>
+
+   <nav class="navbar">
+
+    <<header>
+
+    <div class="logo-area">
+        <div class="logo-icon">📚</div>
+
+        <div>
+            <h1>Netsanet Book Store</h1>
+            <p>የእውቀት መደብር</p>
+        </div>
+    </div>
+
+    <nav>
+
+        <a href="#home">🏠 መነሻ</a>
+
+        <a href="#about">ℹ️ ስለ እኛ</a>
+
+        <a href="#services">🛠️ አገልግሎቶች</a>
+
+        <a href="#books">📚 መጽሐፍት</a>
+
+        <a href="#order">🛒 ትዕዛዝ</a>
+
+        <a href="#contact">📞 ያግኙን</a>
+
+    </nav>
+
+</header>
+</nav>
+</header>
+<style>.hero {
+    max-width: 1100px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h2 {
+    font-size: 38px;
+    text-align: left;
+}
+
+.hero-text h2 span {
+    color: darkblue;
+}
+
+.hero-text p {
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    margin-top: 25px;
+}
+
+.main-button,
+.second-button {
+    display: inline-block;
+
+    padding: 13px 22px;
+    margin: 5px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+}
+
+.main-button {
+    background-color: darkblue;
+    color: white;
+}
+
+.second-button {
+    border: 2px solid darkblue;
+    color: darkblue;
+}
+
+.hero-book {
+    width: 300px;
+
+    text-align: center;
+
+    background-color: #f5f7fa;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+}
+
+.big-book {
+    font-size: 130px;
+}
+
+.hero-book h3 {
+    color: darkblue;
+}
+    
+    .logo-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.logo-icon {
+    font-size: 55px;
+}
+
+.logo-area h1 {
+    margin: 0;
+}
+
+.logo-area p {
+    margin: 5px 0 0;
+    font-size: 16px;
+}
+    .brand {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+    .menu-button {
+    display: none;
+    font-size: 25px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#menu a {
+    text-decoration: none;
+    margin: 10px;
+}
+
+@media (max-width: 600px) {
+
+    .menu-button {
+        display: block;
+        margin-left: auto;
+    }
+
+    #menu {
+        display: none;
+        text-align: center;
+    }
+
+    #menu.show {
+        display: block;
+    }
+
+    #menu a {
+        display: block;
+        padding: 12px;
+    }
+}
+    #order {
+    padding: 40px 20px;
+    background-color: #f5f7fa;
+}
+
+#order h2 {
+    text-align: center;
+}
+
+#order form {
+    max-width: 500px;
+    margin: auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+#order label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#order input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+}
+
+#order button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    border-radius: 7px;
+    background-color: #1e3a5f;
+    color: white;
+    font-size: 16px;
+}
+    .book-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+<button class="menu-button" onclick="toggleMenu()">
+    ☰
+</button>
+ .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.navbar {
+    background-color: #333;
+}
+
+.logo {
+    color: white;
+}
+
+.nav-links a {
+    color: white;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    padding: 8px;
+}  
+    .order-form {
+    display: none;
+    width: 90%;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.order-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.order-form button {
+    padding: 12px 18px;
+    margin: 5px;
+}
+    .book-card {
+    width: 280px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    margin: 10px;
+    text-align: center;
+    background-color: white;
+    .book-card button:hover {
+    opacity: 0.8;
+}
+}
+
+.book-card h3 {
+    margin-top: 0;
+}
+
+.book-card button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #1e3a5f;
+    color: white;
+    font-size: 16px;
+}
+    #noResult {
+
+    text-align: center;
+    font-size: 18px;
+    margin: 20px;
+
+}
+    .search-box {
+    width: 30%;
+    max-width: 500px;
+    margin: 20px auto;
+    display: flex;
+    gap: 10px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.search-box button {
+    padding: 12px 18px;
+}
+    
+    @media (max-width: 600px) {
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .book-card {
+        width: 95%;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+    }
+
+}
+    form {
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+}
+input,
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    margin: 8px 0;
+}
+    img {
+    max-width: 100%;
+    height: auto;
+}
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    margin: 0;
+}
+    footer {
+    text-align: center;
+    padding: 30px 15px;
+    background-color: brown;
+    color: white;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 8px;
+}
+    #contact {
+    background-color: white;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 120px;
+}
+
+form button {
+    margin-top: 15px;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+}
+    .books {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.book-card {
+    background-color: white;
+    width: 220px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px gray;
+    text-align: center;
+}
+
+.book-card h3 {
+    color: darkblue;
+}
+
+.book-card button {
+    background-color: darkblue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+    .services {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px gray;
+    text-align: center;
+}
+
+.card h3 {
+    color: darkblue;
+}
+
+.card p {
+    color: #444;
+}
+    header {
+    background-color: darkblue;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 18px;
+}
+    body {
+        font-family: Arial;
+        background-color: #f2f2f2;
+        margin: 20px;
+    }
+
+    h1 {
+        color: blue;
+        text-align: center;
+    }
+
+    h2 {
+        color: darkgreen;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    li {
+        margin: 10px;
+    }
+    #about {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+#about h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#about h3 {
+    margin-top: 20px;
+}
+
+#about p {
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+#about li {
+    margin: 12px 0;
+}
+#books {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.books-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.book-card {
+    width: 250px;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.book-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.book-card h3 {
+    margin: 15px 0 8px;
+}
+
+.book-card strong {
+    display: block;
+    margin: 12px;
+    font-size: 18px;
+}
+
+.book-card button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+
+    .book-card {
+        width: 100%;
+        max-width: 330px;
+    }
+
+}
+.book-search {
+    text-align: center;
+    margin: 20px 0 30px;
+}
+
+.book-search input {
+    width: 90%;
+    max-width: 450px;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+#services {
+    padding: 50px 20px;
+    background-color: #f5f7fa;
+}
+
+#services h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.services-container {
+    max-width: 1000px;
+    margin: auto;
+
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    width: 280px;
+    padding: 25px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+}
+
+.service-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.service-card h3 {
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    line-height: 1.7;
+}
+#contact {
+    padding: 50px 20px;
+    background-color: #f5f7fa;
+}
+
+#contact h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-container {
+    max-width: 1000px;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    width: 260px;
+    padding: 25px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+}
+
+.contact-icon {
+    font-size: 40px;
+}
+
+.contact-card p {
+    line-height: 1.7;
+}
+
+.contact-button {
+    display: inline-block;
+
+    margin-top: 10px;
+    padding: 10px 15px;
+
+    background-color: #1e3a5f;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 7px;
+}
+.search-box {
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+.search-box input {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 14px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+@media (max-width: 600px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h2 {
+        text-align: center;
+        font-size: 28px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .hero-book {
+        width: 90%;
+        max-width: 320px;
+    }
+
+    .main-button,
+    .second-button {
+        display: block;
+        margin: 10px 0;
+    }
+
+}
+.books-intro {
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.search-box {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto 30px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 14px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+
+.books-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.book-card {
+    width: 260px;
+    padding: 20px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+
+    transition: transform 0.2s;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+}
+
+.book-cover {
+    font-size: 90px;
+
+    padding: 20px;
+
+    background-color: #f5f5f5;
+
+    border-radius: 10px;
+}
+
+.book-card h3 {
+    color: darkblue;
+}
+
+.book-card p {
+    line-height: 1.6;
+}
+
+.book-card strong {
+    display: block;
+
+    font-size: 20px;
+
+    margin: 15px;
+}
+
+.book-card button {
+    padding: 12px 22px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: darkblue;
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+.book-card button:hover {
+    opacity: 0.8;
+}
+</style>
+
+<body>
+
+   <section id="home">
+
+    <h2>እንኳን ወደ Netsanet Book Store በደህና መጡ!</h2>
+
+    <p>
+        መጽሐፍ • ህትመት • የጽሑፍ ሰነድ
+    </p>
+
+</section>
+<section id="home">
+
+    <div class="hero">
+
+        <div class="hero-text">
+
+            <h2>
+                📚 እንኳን ወደ
+                <span>Netsanet Book Store</span>
+                በደህና መጡ!
+            </h2>
+
+            <p>
+                የተለያዩ መጽሐፍትን፣
+                የህትመት እና
+                የጽሑፍ አገልግሎቶችን
+                በቀላሉ ያግኙ።
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#books" class="main-button">
+                    📚 መጽሐፍትን ይመልከቱ
+                </a>
+
+                <a href="#contact" class="second-button">
+                    📞 ያግኙን
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-book">
+
+            <div class="big-book">
+                📖
+            </div>
+
+            <h3>
+                እውቀት ለሁሉም
+            </h3>
+
+            <p>
+                Read • Learn • Grow
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+  
+
+     
+</section>
+
+  <section id="contact">
+
+    <section id="services">
+
+    <h2>አገልግሎቶቻችን</h2>
+
+    <div class="services">
+
+        <div class="card">
+            <h3>📚 መጽሐፍ ማሳተም</h3>
+            <p>
+                የተለያዩ መጽሐፍትን
+                ለህትመት ማዘጋጀትና ማሳተም።
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>📕 መጽሐፍ ሽያጭ</h3>
+            <p>
+                የተለያዩ መጽሐፍትን
+                ለደንበኞች ማቅረብ።
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>📝 የጽሑፍ ሰነድ</h3>
+            <p>
+                የተለያዩ የጽሑፍ
+                ሰነዶችን ማዘጋጀት።
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<section id="books">
+
+    <h2>📚 የሚገኙ መጽሐፍት</h2>
+
+    <p class="books-intro">
+        የሚፈልጉትን መጽሐፍ ይፈልጉ፣
+        ዋጋውን ይመልከቱ እና ትዕዛዝ ያስገቡ።
+    </p>
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="bookSearch"
+            placeholder="🔍 የመጽሐፍ ስም ይፈልጉ..."
+            onkeyup="searchBooks()">
+
+    </div>
+
+
+    <!-- BOOKS -->
+
+    <div class="books-container">
+
+
+        <!-- BOOK 1 -->
+
+        <div class="book-card">
+
+            <div class="book-cover">
+                📘
+            </div>
+
+            <h3>የእውቀት ጉዞ</h3>
+
+            <p>
+                እውቀትን የሚያበረታታ
+                መጽሐፍ።
+            </p>
+
+            <strong>
+                250 ብር
+            </strong>
+
+            <button
+                onclick="selectBook('የእውቀት ጉዞ')">
+
+                🛒 ይዘዙ
+
+            </button>
+
+        </div>
+
+
+        <!-- BOOK 2 -->
+
+        <div class="book-card">
+
+            <div class="book-cover">
+                📗
+            </div>
+
+            <h3>የስኬት መንገድ</h3>
+
+            <p>
+                ስኬትን ለማሳካት
+                የሚያግዙ ሀሳቦች።
+            </p>
+
+            <strong>
+                300 ብር
+            </strong>
+
+            <button
+                onclick="selectBook('የስኬት መንገድ')">
+
+                🛒 ይዘዙ
+
+            </button>
+
+        </div>
+
+
+        <!-- BOOK 3 -->
+
+        <div class="book-card">
+
+            <div class="book-cover">
+                📕
+            </div>
+
+            <h3>የንባብ ዓለም</h3>
+
+            <p>
+                የንባብ ፍላጎትን
+                የሚያበረታታ መጽሐፍ።
+            </p>
+
+            <strong>
+                200 ብር
+            </strong>
+
+            <button
+                onclick="selectBook('የንባብ ዓለም')">
+
+                🛒 ይዘዙ
+
+            </button>
+
+        </div>
+
+
+    </div>
+
+</section>
+    </div>
+
+</section> 
+<class="book-search">
+
+    <input
+        type="text"
+        id="bookSearch"
+        placeholder="🔍 የመጽሐፍ ስም ይፈልጉ..."
+        onkeyup="searchBooks()">
+
+</div>
+<section id="order">
+
+    <h2>🛒 መጽሐፍ ለማዘዝ</h2>
+
+  <form id="orderForm">
+
+    <label>የመጽሐፉ ስም</label>
+    <input type="text" id="bookName" required>
+
+    <label>ሙሉ ስም</label>
+    <input type="text" id="customerName" required>
+
+    <label>ስልክ ቁጥር</label>
+    <input type="tel" id="phone" required>
+
+    <label>የሚፈልጉት ብዛት</label>
+    <input type="number" id="quantity" min="1" value="" required>
+
+    <button type="submit">
+        📤 ትዕዛዝ ላክ
+    </button>
+
+</form>
+
+<p id="orderMessage"></p>
+</section>
+<section id="contact">
+
+    <h2>📞 ያግኙን</h2>
+
+    <div class="contact-container">
+
+        <div class="contact-card">
+
+            <div class="contact-icon">📍</div>
+
+            <h3>አድራሻ</h3>
+
+            <p>
+                ሞላሌ ከተማ<br>
+                01 ቀበሌ
+            </p>
+
+        </div>
+
+
+        <div class="contact-card">
+
+            <div class="contact-icon">📞</div>
+
+            <h3>ስልክ</h3>
+
+            <p>
+                0989092550
+            </p>
+
+            <a href="tel:0989092550"
+               class="contact-button">
+                📞 አሁን ይደውሉ
+            </a>
+
+        </div>
+
+
+        <div class="contact-card">
+
+            <div class="contact-icon">📧</div>
+
+            <h3>Email</h3>
+
+            <p>
+                netsanetgeremew6@gmail.com
+            </p>
+
+            <a href="mailto:netsanetgeremew6@gmail.com"
+               class="contact-button">
+                📧 Email ይላኩ
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+  <form onsubmit="sendMessage(event)">
+
+    <input
+        type="text"
+        id="name"
+        placeholder="ስምዎ">
+
+    <input
+        type="email"
+        id="email"
+        placeholder="Email">
+
+    <textarea
+        id="message"
+        placeholder="መልዕክትዎ"></textarea>
+
+    <button type="submit">
+        መልዕክት ላክ
+    </button>
+
+</form>
+</section>
+<script>
+
+function buyBook(bookName) {
+
+    alert(
+        "Netsanet Book Store\n" +
+        "የመረጡት መጽሐፍ፦ " +
+        bookName
+    );
+
+}
+
+
+function sendMessage(event) {
+
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+
+
+    if (name == "") {
+
+        alert("እባክዎ ስምዎን ያስገቡ።");
+
+        return;
+    }
+
+
+    if (email == "") {
+
+        alert("እባክዎ Emailዎን ያስገቡ።");
+
+        return;
+    }
+
+
+    if (message == "") {
+
+        alert("እባክዎ መልዕክትዎን ያስገቡ።");
+
+        return;
+    }
+
+
+    alert(
+        "እናመሰግናለን " +
+        name +
+        "! መልዕክትዎ ተቀብለናል።"
+    );
+
+}
+
+function searchBooks() {
+
+    let searchText =
+    document.getElementById("bookSearch").value.toLowerCase();
+
+    let books =
+    document.querySelectorAll(".book-card");
+
+    let found = false;
+
+
+    books.forEach(function(book){
+
+        let bookName =
+        book.querySelector("h3")
+        .textContent
+        .toLowerCase();
+
+
+        if(bookName.includes(searchText)){
+
+            book.style.display = "block";
+
+            found = true;
+
+        } else {
+
+            book.style.display = "none";
+
+        }
+
+    });
+
+
+    let message =
+    document.getElementById("noResult");
+
+
+    if(found == false){
+
+        message.textContent =
+        "⚠️ ይቅርታ፣ የፈለጉት መጽሐፍ አልተገኘም።";
+
+    } else {
+
+        message.textContent = "";
+
+    }
+
+}
+function openOrder(bookName) {
+
+    document.getElementById("orderForm").style.display = "block";
+
+    document.getElementById("selectedBook").textContent = bookName;
+
+}
+function closeOrder() {
+
+    document.getElementById("orderForm").style.display = "none";
+
+}
+function submitOrder() {
+
+    let name =
+        document.getElementById("customerName").value;
+
+    let phone =
+        document.getElementById("customerPhone").value;
+
+    let book =
+        document.getElementById("selectedBook").textContent;
+
+
+    if (name == "") {
+
+        alert("እባክዎ ስምዎን ያስገቡ።");
+
+        return;
+    }
+
+
+    if (phone == "") {
+
+        alert("እባክዎ ስልክ ቁጥርዎን ያስገቡ።");
+
+        return;
+    }
+
+
+    alert(
+        "ትዕዛዝዎ ተቀብለናል።\n\n" +
+        "መጽሐፍ፦ " + book + "\n" +
+        "ስም፦ " + name + "\n" +
+        "ስልክ፦ " + phone
+    );
+
+}
+
+
+document.getElementById("orderForm").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    let customerName = document.getElementById("customerName").value;
+    let bookName = document.getElementById("bookName").value;
+    let quantity = document.getElementById("quantity").value;
+
+    document.getElementById("orderMessage").textContent =
+        "✅ " + customerName +
+        "፣ የ" + bookName +
+        " መጽሐፍ ትዕዛዝዎ (" +
+        quantity +
+        " ብዛት) ተቀብለናል።";
+
+});
+function toggleMenu() {
+
+    document.getElementById("menu")
+        .classList.toggle("show");
+
+}
+function selectBook(bookName) {
+
+    document.getElementById("bookName").value = bookName;
+
+    document.getElementById("order").scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+function selectBook(bookName) {
+
+    document.getElementById("bookName").value = bookName;
+
+    document.getElementById("order").scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+function searchBooks() {
+
+    let searchText =
+        document.getElementById("bookSearch").value
+        .toLowerCase();
+
+    let books =
+        document.querySelectorAll(".book-card");
+
+    books.forEach(function(book) {
+
+        let name =
+            book.querySelector("h3").textContent
+            .toLowerCase();
+
+        if (name.includes(searchText)) {
+            book.style.display = "";
+        } else {
+            book.style.display = "none";
+        }
+
+    });
+
+}
+document.getElementById("orderForm").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    let customerName =
+        document.getElementById("customerName").value;
+
+    let bookName =
+        document.getElementById("bookName").value;
+
+    let phone =
+        document.getElementById("phone").value;
+
+    let quantity =
+        document.getElementById("quantity").value;
+
+
+    let message =
+        "📚 Netsanet Book Store%0A%0A" +
+        "🛒 አዲስ የመጽሐፍ ትዕዛዝ%0A%0A" +
+        "👤 ስም: " + customerName + "%0A" +
+        "📖 መጽሐፍ: " + bookName + "%0A" +
+        "🔢 ብዛት: " + quantity + "%0A" +
+        "📞 ስልክ: " + phone;
+
+
+    let whatsappNumber = "251989092550";
+
+
+    let whatsappURL =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        message;
+
+
+    window.open(whatsappURL, "_blank");
+
+});
+function searchBooks() {
+
+    let searchText =
+        document.getElementById("bookSearch").value.toLowerCase();
+
+    let books =
+        document.querySelectorAll(".book-card");
+
+    books.forEach(function(book) {
+
+        let bookName =
+            book.querySelector("h3").textContent.toLowerCase();
+
+        if (bookName.includes(searchText)) {
+
+            book.style.display = "block";
+
+        } else {
+
+            book.style.display = "none";
+
+        }
+
+    });
+
+}
+</script>
+
+<footer>
+    
+
+    <h3>📚 Netsanet Book Store</h3>
+
+    <p>
+        ሞላሌ ከተማ፣ 01 ቀበሌ
+    </p>
+
+    <p>
+        📞 0989092550
+    </p>
+
+    <p>
+        📧 netsanetgeremew6@gmail.com
+    </p>
+
+    <hr>
+
+    <p>
+        © 2026 Netsanet Book Store. መብቱ የተጠበቀ ነው።
+    </p>
+
+</footer>
+</body>
+</html>
